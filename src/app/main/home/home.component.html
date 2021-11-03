@@ -1,0 +1,15 @@
+<div class="heading">
+  <h1>Weather.org</h1>
+</div>
+<div class="list" *ngIf="weatherDetails.length >= 5">
+  <div *ngFor="let weather of weatherDetails">
+    <app-card
+      [heading]="weather?.name"
+      [lines]="[
+        'Temperature :' + (weather?.main?.temp | decimal) + 'F',
+        'Humidity :' + weather?.main?.humidity + '%',
+        'Chance of Rain :' + weather?.clouds?.all + '%'
+      ]"
+    ></app-card>
+  </div>
+</div>

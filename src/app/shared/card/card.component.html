@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="heading">
+    <h3>{{ heading }}</h3>
+  </div>
+  <div class="lines" *ngFor="let line of lines">
+    <div [innerHTML]="line"></div>
+  </div>
+</div>
